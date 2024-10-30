@@ -5,7 +5,7 @@ body {
   
   font-family: "Akaya Kanadaka", sans-serif; /* Ensure the correct font family */
   line-height: 1.6; /* Set line height for the entire body */
-  background-size: cover, 400% 400%; /* Cover the entire body with the image */
+  background-size: cover, 100% 100%; /* Cover the entire body with the image */
   animation: gradientAnimation 15s ease infinite; /* Animation for the gradient */
   color: #333333;
 }
@@ -81,6 +81,33 @@ section {
   padding: 20px; /* Added padding for better spacing */
 }
 
+.services-images-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.services-images-item {
+  max-width: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Image Styles */
+img {
+  display: block; /* Ensures images are block elements */
+  max-width: 100%; /* Responsive images */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth effect */
+  padding: 10px; /* Add padding around images */
+  border-radius: 8px; /* Round the corners of images */
+}
+
+img:hover {
+  transform: scale(1.05); /* Scale up the image on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
 /* Navigation Styles */
 .sidenav {
     position: fixed; /* Fixed position for the sidenav */
@@ -137,23 +164,3 @@ section {
     display: block; /* Show overlay when active */
 }
 
-
-/* Image Styles */
-img {
-  width: 200px;
-  height: 150px;
-}
-
-@media only screen and (max-width: 768px) {
-  img {
-    width: 150px;
-    height: 100px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  img {
-    width: 100px;
-    height: 75px;
-  }
-}

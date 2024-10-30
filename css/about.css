@@ -57,6 +57,7 @@ a:hover {
   text-decoration: underline;
 }
 
+
 /* Section Styles */
 section {
   background: rgba(254, 249, 217, 0.9); /* Slightly transparent for layering effect */
@@ -139,11 +140,30 @@ section {
 .main {
     margin-left: 20px; /* Space for the toggle button */
 }
-/* Image Styles */
-img {
-  width: 200px;
-  height: 150px;
+
+.services-images-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 768px) {
-  img
+.services-images-item {
+  max-width: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+/* Image Styles */
+img {
+  display: block; /* Ensures images are block elements */
+  max-width: 100%; /* Responsive images */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth effect */
+  padding: 10px; /* Add padding around images */
+  border-radius: 8px; /* Round the corners of images */
+
+}
+
+img:hover {
+  transform: scale(1.05); /* Scale up the image on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}

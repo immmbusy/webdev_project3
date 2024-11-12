@@ -57,3 +57,39 @@ function initializeSlider(slider) {
 
 // Initialize each slider on the page
 sliders.forEach(initializeSlider);
+
+// Initialize Google Maps API
+ function initMap() {
+      const map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 37.0, lng: 119.0 }, // Center point to show all three markers
+        zoom: 5,
+        mapId: 'f74b50a1c5b48868' // Optional custom map style
+      });
+
+      // Marker for the Great Wall of China
+      const greatWall = { lat: 40.4319, lng: 116.5704 };
+      new google.maps.Marker({
+        position: greatWall,
+        map: map,
+        animation: google.maps.Animation.BOUNCE,
+        title: "Great Wall of China"
+      });
+
+      // Marker for Shanghai
+      const shanghai = { lat: 31.2304, lng: 121.4737 };
+      new google.maps.Marker({
+        position: shanghai,
+        map: map,
+        animation: google.maps.Animation.BOUNCE,
+        title: "Shanghai"
+      });
+
+      // Marker for Tangshan
+      const tangshan = { lat: 39.6304, lng: 118.1802 };
+      new google.maps.Marker({
+        position: tangshan,
+        map: map,
+        animation: google.maps.Animation.BOUNCE,
+        title: "Tangshan"
+      });
+    }

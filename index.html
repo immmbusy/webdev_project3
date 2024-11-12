@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-		<script async src="js/script.js"></script>
-    <title>Home</title>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script async src="js/script.js"></script>
+  <title>Home</title>
+</head>
 
-  <body>
-		<button id="toggle-button">☰</button>
-    <nav class="sidenav" id="mySidenav">
-      <a href="index.html" id="home">Home</a>
-      <a href="about.html" id="aboutMe">About Me</a>
-      <a href="resume.html" id="resume">Resume</a>
-      <a href="projects.html" id="projects">Projects</a>
-    </nav>
+<body>
+  <button id="toggle-button">☰</button>
+  <nav class="sidenav" id="mySidenav">
+    <a href="index.html" id="home">Home</a>
+    <a href="about.html" id="aboutMe">About Me</a>
+    <a href="resume.html" id="resume">Resume</a>
+    <a href="projects.html" id="projects">Projects</a>
+  </nav>
 
-    <div id="overlay"></div>
+  <div id="overlay"></div>
 
-    <main class="main">
-      <section class="marquee">
-        <h1>Welcome</h1>
+  <main class="main">
+    <section class="marquee">
+      <h1>Welcome</h1>
 
-        <section>
-          <p>Oh hiiiiii greetings to my page</p>
-          <!-- Add a wrapper for the image with a class of "photos" to apply consistent styling -->
-          <div class="photos">
-            <img src="media/now.jpg" alt="present photo of me"/>
-          </div>
-        </section>
+      <section>
+        <p>Oh hiiiiii greetings to my page</p>
+        <!-- Add a wrapper for the image with a class of "photos" to apply consistent styling -->
+        <div class="photos">
+          <img src="media/now.jpg" alt="present photo of me"/>
+        </div>
       </section>
-    </main>
 
-    <footer>
-      <p>&copy; 2023 Jian Liang. All rights reserved.</p>
-    </footer>
-  </body>
+      <section>
+        <h1>Google Maps API</h1>
+        <div id="map"></div>
+        <script async
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWb7gAKF2VZgbb_qS8y-blrB7B2X3V9H8&map_ids=f74b50a1c5b48868&callback=initMap">
+        </script>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Jian Liang. All rights reserved.</p>
+  </footer>
+</body>
 </html>

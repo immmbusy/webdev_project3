@@ -1,0 +1,295 @@
+body {
+  background-image: url("https://cdn.glitch.global/a5d4c914-cb94-4cd1-bf26-a1933bd1dbcf/2-sides-of-brain-2-e1648661027959.jpeg?v=1654037260230"), 
+                    linear-gradient(45deg, #d2e0fb, #fef9d9);
+  background-repeat: no-repeat;
+  background-size: cover, 400% 400%; /* Ensure both the image and gradient cover appropriately */
+  font-family: "Akaya Kanadaka", sans-serif; /* Ensure the correct font family */
+  line-height: 1.6; /* Set line height for the entire body */
+  animation: gradientAnimation 15s ease infinite; /* Animation for the gradient */
+  color: #333333;
+}
+
+/* Keyframes for background animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Global Text Styles */
+h1, h2, h3, h4, p {
+  line-height: 1.6; /* Maintain a good line height for readability */
+  font-family: inherit; /* Ensure these elements inherit the font-family */
+}
+
+/* Specific Styles for Headings */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.75em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* Paragraph Styles */
+p {
+  margin-bottom: 15px;
+  text-align: center;
+}
+/* Link Styles */
+a {
+  color: #007bff;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Center Unordered List (ul) and Ordered List (ol) */
+ul, ol {
+  list-style-position: inside; /* Ensures the bullet points are inside the list item */
+  text-align: center; /* Centers the text and bullets in the list */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+/* Center the individual list items */
+ul li, ol li {
+  display: inline-block; /* Make each list item inline-block to be centered */
+  margin: 10px 0; /* Adds space between list items */
+  text-align: center; /* Center the content inside the list items */
+}
+
+
+/* Section Styles */
+section {
+  background: rgba(254, 249, 217, 0.9); /* Slightly transparent for layering effect */
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  padding: 20px; /* Add padding for better spacing */
+  text-align: center; /* Ensure the content within sections is centered */
+}
+
+/* Uniform Image Sizing */
+.photos img {
+  width: 300px; /* Increase the width of the images */
+  height: 300px; /* Increase the height of the images */
+  object-fit: cover; /* Ensures images are cropped to fit */
+  margin: 10px auto; /* Center images horizontally and give space between them */
+  display: block; /* Block display ensures images behave like block-level elements */
+  border-radius: 8px; /* Rounds image corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for images */
+.photos img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Shadow grows on hover */
+}
+
+/* Center and Style Video */
+.photos video {
+  display: block;
+  margin: 20px auto; /* Centers video horizontally */
+  width: 100%; /* Full width of the container */
+  max-width: 600px; /* Limits max width for larger screens */
+  border-radius: 8px; /* Rounded corners for video */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photos video:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Shadow grows on hover */
+}
+
+/* General Image Sizing and Centering */
+.projects img, .older_projects img {
+  display: block;
+  margin: 0 auto; /* Centers the images */
+  width: 300px; /* Set a fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Specific for Service Images in Blender Project */
+.service-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center images within this section */
+  gap: 15px; /* Space between images */
+}
+
+.service-images-container .service-imagesitem {
+  width: 220px; /* Slightly larger fixed width for Blender project images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-images-container .service-imagesitem:hover {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+//* Slider Container */
+.slider {
+  position: relative;
+  width: 80%; /* Increase the width of the slider container */
+  max-width: 1000px; /* Adjust the max-width as needed */
+  margin: auto; /* Center the slider horizontally */
+  overflow: hidden;
+}
+
+/* Make the slider images larger */
+.slider-image {
+  width: 100%; /* Ensures the image takes the full width of the slider container */
+  display: none;
+}
+
+/* Show the active slider image */
+.slider-image.active {
+  display: block;
+}
+
+/* Navigation Controls (previous/next buttons) */
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+/* Style the next and previous buttons */
+.prev, .next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Media Query 1: Adjust for smaller screens */
+@media (min-width: 768px) {
+    body {
+        font-size: 16px; /* Larger base font size */
+    }
+    .slider-container {
+        width: 80%; /* Slider width on medium screens */
+    }
+    .sidenav {
+        width: 180px; /* Adjust sidenav width */
+    }
+}
+
+/* Media Query 2: Adjust for larger screens */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px; /* Even larger font size for readability */
+    }
+    .slider-container {
+        width: 60%; /* Slider width on large screens */
+    }
+    .sidenav {
+        width: 200px; /* Full sidenav width */
+    }
+    section {
+        padding: 30px; /* Increase padding in sections */
+        font-size: 1.1em;
+    }
+    .photos img {
+        width: 280px; /* Adjust image size in photo gallery */
+        height: 280px;
+    }
+}
+
+
+/* Navigation Styles */
+.sidenav {
+    position: fixed; /* Fixed position for the sidenav */
+    width: 200px; /* Set width for sidenav */
+    height: 100%; /* Full height */
+    background-color: #333; /* Background color */
+    left: -200px; /* Start hidden off-screen */
+    transition: left 0.3s ease; /* Smooth transition */
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+.sidenav a {
+    display: block; /* Block display for links */
+    padding: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-bottom: 1px solid #444; /* Divider between links */
+}
+
+.sidenav a:hover {
+    background-color: #555; /* Change background on hover */
+}
+
+.sidenav.open {
+    left: 0; /* Slide in */
+}
+
+#toggle-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    z-index: 1001; /* Ensure button is above sidenav */
+}
+
+/* Overlay Styles */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: none; /* Hidden by default */
+    z-index: 999; /* Below the button but above content */
+}
+
+#overlay.active {
+    display: block; /* Show overlay when active */
+}

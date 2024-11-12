@@ -3,34 +3,40 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet" />
-    <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script async src="js/script.js"></script>
+    <title>Home</title>
   </head>
+
   <body>
-    <button id="toggle-button">☰</button>
+		<button id="toggle-button">☰</button>
     <nav class="sidenav" id="mySidenav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="resume.html">Resume</a>
-      <a href="projects.html">Projects</a>
+      <a href="index.html" id="home">Home</a>
+      <a href="about.html" id="aboutMe">About Me</a>
+      <a href="resume.html" id="resume">Resume</a>
+      <a href="projects.html" id="projects">Projects</a>
     </nav>
 
     <div id="overlay"></div>
 
-    <div class="main">
-      <div class="marquee">
+    <main class="main">
+      <section class="marquee">
         <h1>Welcome</h1>
-      </div>
-    </div>
+
+        <section>
+          <p>Oh hiiiiii greetings to my page</p>
+          <!-- Add a wrapper for the image with a class of "photos" to apply consistent styling -->
+          <div class="photos">
+            <img src="media/now.jpg" alt="present photo of me"/>
+          </div>
+        </section>
+      </section>
+    </main>
 
     <footer>
       <p>&copy; 2023 Jian Liang. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
   </body>
 </html>

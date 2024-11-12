@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/about.css"> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script async src="js/script.js"></script>
     <title>About Me</title>
   </head>
+
   <body>
     <button id="toggle-button">☰</button>
     <nav class="sidenav" id="mySidenav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="resume.html">Resume</a>
-        <a href="projects.html">Projects</a>
+      <a href="index.html" id="home">Home</a>
+      <a href="about.html" id="aboutMe">About Me</a>
+      <a href="resume.html" id="resume">Resume</a>
+      <a href="projects.html" id="projects">Projects</a>
     </nav>
 
     <div id="overlay"></div>
@@ -24,7 +24,12 @@
     <div class="main">
       <section class="info">
         <h2>About Me</h2>
-        <p>Hi, my name is Jian Liang, 21 years old. I go by the nickname Calvin.</p>
+        <p>Hello! I’m Jian Liang, but I like to be called Calvin. 21 years old, Average Asian male, and loves to watch Chinese donghua aka Chinese animation.</p>
+        <p>I dedicated a lot of my time to JROTC during my high school days. :)</p>
+        <div class="photos">
+				<img src="media/hsjrotc.jpg" alt="first trophy"/>
+				</div>
+
         <p>I have traveled to the following cities:</p>
         <ul>
           <li>San Francisco</li>
@@ -40,14 +45,105 @@
         <p>If you haven't guessed yet, I love to travel.</p>
       </section>
 
-      <section class="service-images-container">
+      <section class="photos">
         <h2>Photos</h2>
-        <p>Cancun</p>
-        <img class="service-imagesitem" src="media/cancun.jpg" alt="A beautiful monument in Cancun"/>
-        <p>Philadelphia</p>
-        <img class="service-imagesitem" src="media/philly.jpg" alt="The best cheesesteak spot in Philadelphia"/>
-        <img class="service-imagesitem" src="media/cheesesteak.jpg" alt="Juicy cheesesteak and drinks"/>
-        <p>Do you think my cheesesteak looks good?</p>
+        <p>San Francisco</p>
+        <video controls>
+          <source src="media/sanfrancisco.mp4" type="video/mp4">
+          <source src="media/sanfrancisco.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+
+        <section class="slider">
+          <h2>Cancun, Mexico</h2>
+          <div class="slider-container">
+            <img src="media/flytocancun_1.jpg" alt="traveling from Midway to Cancun" class="slider-image"/>
+            <img src="media/flytocancun.jpg" alt="plane" class="slider-image"/>
+            <img src="media/cancun.jpg" alt="A beautiful monument in Cancun" class="slider-image"/>
+            <img src="media/cancun_1.jpg" alt="the stairs at the ancient monument" class="slider-image"/>
+            <img src="media/cancun_5.jpg" alt="pictures from visiting the ancient monuments at Cancun, Mexico" class="slider-image"/>
+            <img src="media/cancun_6.jpg" alt="pictures from visiting the ancient monuments at Cancun, Mexico" class="slider-image"/>
+            <img src="media/cancun_8.jpg" alt="pictures from visiting the ancient monuments at Cancun, Mexico" class="slider-image"/>
+            <img src="media/cancun_7.jpg" alt="pictures from visiting the ancient monuments at Cancun, Mexico" class="slider-image"/>
+            <img src="media/cancun_4.jpg" alt="pictures from visiting the ancient monuments at Cancun, Mexico" class="slider-image"/>
+            <img src="media/cancun_christmas.jpg" alt="Christmas at Cancun" class="slider-image"/>
+            <img src="media/cancun_2.jpg" alt="Christmas at Cancun" class="slider-image"/>
+            <img src="media/cancun_3.jpg" alt="Christmas at Cancun" class="slider-image"/>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+          </div>
+        </section>
+
+        <section class="slider">
+          <h2>Toronto, Canada</h2>
+          <div class="slider-container">
+            <img src="media/toronto_2.jpg" alt="Toronto letters" class="slider-image"/>
+            <img src="media/toronto_3.jpg" alt="food yummy" class="slider-image"/>
+            <img src="media/toronto_6.jpg" alt="skydeck at Tower 101" class="slider-image"/>
+            <img src="media/toronto_1.jpg" alt="skydeck view" class="slider-image"/>
+            <img src="media/toronto.jpg" alt="Niagara Falls" class="slider-image"/>
+            <img src="media/toronto_4.jpg" alt="Niagara Falls" class="slider-image"/>
+            <img src="media/toronto_5.jpg" alt="ermmmm" class="slider-image"/>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+          </div>
+        </section>
+
+        <section class="slider">
+          <h2>New York</h2>
+          <div class="slider-container">
+            <img src="media/newyork_1.jpg" alt="reaching NYC airport" class="slider-image"/>
+            <img src="media/newyork_15.jpg" alt="walking the streets of Flushing - New York" class="slider-image"/>
+            <img src="media/newyork_2.jpg" alt="exploring the mountains at the outskirts of New York" class="slider-image"/>
+            <img src="media/newyork_3.jpg" alt="eating" class="slider-image"/>
+            <img src="media/newyork_6.jpg" alt="the Statue of Liberty" class="slider-image"/>
+            <img src="media/newyork_5.jpg" alt="final day at the airport flying back to Chicago" class="slider-image"/>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+          </div>
+        </section>
+
+        <section class="slider">
+          <h2>Philadelphia</h2>
+          <div class="slider-container">
+            <img src="media/phillytown.jpg" alt="explore the history" class="slider-image"/>
+            <img src="media/philly_2.jpg" alt="exploring the history photo 2" class="slider-image"/>
+            <img src="media/philly.jpg" alt="The best cheesesteak spot in Philadelphia" class="slider-image"/>
+            <img src="media/cheesesteak.jpg" alt="Juicy cheesesteak and drinks" class="slider-image"/>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            <p>Hope you found my cheesesteak yummy.</p>
+          </div>
+        </section>
+
+        <section class="slider">
+          <h2>Washington D.C.</h2>
+          <div class="slider-container">
+            <img src="media/washington_dc_1.jpg" alt="Washington Monument" class="slider-image"/>
+            <img src="media/ghost.jpg" alt="walking in the spooky town" class="slider-image"/>
+            <img src="media/dc_3.jpg" alt="inside the Capitol" class="slider-image"/>
+            <img src="media/dc_4.jpg" alt="inside the Capitol photo 2" class="slider-image"/>
+            <img src="media/dc_2.jpg" alt="photo2" class="slider-image"/>
+            <img src="media/dc_1.jpg" alt="photo1" class="slider-image"/>
+            <img src="media/washington.jpg" alt="outside the USA Capital" class="slider-image"/>
+            <img src="media/washtington_dc.jpg" alt="background is the US Monument" class="slider-image"/>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+          </div>
+        </section>
+
+        <section class="slider">
+          <h2>Chicago Route 66</h2>
+          <div class="slider-container">
+            <img src="media/route66.jpg" alt="arrive at Pontiac, Illinois" class="slider-image"/>
+            <img src="media/roadsixtysix_3.jpg" alt="photo room" class="slider-image"/>
+            <img src="media/roadsixtysix_2.jpg" alt="me on the tractor" class="slider-image"/>
+            <img src="media/roadsixtysix_1.jpg" alt="shooting" class="slider-image"/>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+          </div>
+        </section>
+
         <p>I have many more photos I want to share. But I'm shy. How about following me on Instagram: <strong>immmbusyy</strong> for more photos from my travels.</p>
       </section>
 
@@ -72,12 +168,9 @@
         </div>
       </section>
     </div>
-		
-		<footer>
-			<p>&copy; 2023 Jian Liang. All rights reserved.</p>
-		</footer>
-		
-		 <script src="script.js"></script> <!-- Link to your JavaScript file -->
+
+    <footer>
+      <p>&copy; 2023 Jian Liang. All rights reserved.</p>
+    </footer>
   </body>
 </html>
-

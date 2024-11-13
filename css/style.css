@@ -168,7 +168,7 @@ section {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
-//* Slider Container */
+/* Slider Container */
 .slider {
   position: relative;
   width: 80%; /* Increase the width of the slider container */
